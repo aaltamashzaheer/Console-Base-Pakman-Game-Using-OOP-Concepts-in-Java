@@ -34,19 +34,19 @@ public class Pakman {
         System.out.println("press < for Left Move,press > for Right Move,press ^ for Up Move,press v for Down Move");
         dir = sc.next();
 
-        if (dir.equals(">")) {
+        if (dir.compareTo(">")==0) {
             PP.x++;
-        } else if (dir.equals("<")) {
+        } else if (dir.compareTo("<")==0) {
             PP.x--;
             if (PP.x < 0) {
                 System.out.println("Pacman is already at the boundary!!!");
                 PP.x++;
             }
-        } else if (dir.equals("v")) {
+        } else if (dir.compareTo("v")==0) {
             PP.y++;
 
 
-        } else if (dir.equals("^")) {
+        } else if (dir.compareTo("^")==0) {
             PP.y--;
             if (PP.y < 0) {
                 System.out.println("Pacman is already at the boundary!!!");
@@ -59,16 +59,16 @@ public class Pakman {
     }
 
     public Point reverse() { //Reverse fun for pacman
-        if (dir.equals(">")) {
+        if (dir.compareTo(">")==0) {
             PP.x--;
             if (PP.x < 0) {
                 System.out.println("Pacman is already at the boundary!!!");
                 PP.x++;
             }
-        } else if (dir.equals("<")) {
+        } else if (dir.compareTo("<")==0) {
             PP.x++;
 
-        } else if (dir.equals("v")) {
+        } else if (dir.compareTo("v")==0) {
             PP.y--;
             if (PP.y < 0) {
                 System.out.println("Pacman is already at the boundary!!!");
@@ -76,7 +76,7 @@ public class Pakman {
             }
 
 
-        } else if (dir.equals("^")) {
+        } else if (dir.compareTo("^")==0) {
             PP.y++;
 
         }
